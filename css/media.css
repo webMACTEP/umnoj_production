@@ -1,15 +1,50 @@
+@media (max-width: 1070px) {
+  .header .right .create {
+    display: none;
+  }
+  .header .site-logo-dt {
+    display: none;
+  }
+  .header .site-logo-mob {
+    display: block;
+  }
+  .header .nav-dt {
+    display: none;
+  }
+}
 @media (max-width: 940px) {
+  .header .right .avatar img {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+  }
+  .footer .politic {
+    display: none;
+  }
+  .footer .politic-mob {
+    display: block;
+  }
+  .footer .container {
+    flex-direction: column-reverse;
+  }
   .container {
     margin: 0px 10px;
   }
   h3 {
     font-size: 26px;
   }
-  .data-profile {
-    display: none;
-  }
 }
 @media (max-width: 767px) {
+  h4 {
+    font-size: 18px;
+  }
+  .data-profile .wrapper {
+    overflow-x: scroll;
+  }
+  .header {
+    margin: 0px 0px 16px 0px;
+    border-radius: 0 0 10px 10px;
+  }
   .info-profile .cart .avatar {
     border-radius: 20px;
   }

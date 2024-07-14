@@ -1,4 +1,32 @@
+@media (max-width: 1070px) {
+    .header .right .create {
+        display: none;
+    }
+    .header .site-logo-dt {
+        display: none;
+    }
+    .header .site-logo-mob {
+        display: block;
+    }
+    .header .nav-dt {
+        display: none;
+    }
+}
 @media (max-width: 940px) {
+    .header .right .avatar img {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+    }
+    .footer .politic {
+        display: none;
+    }
+    .footer .politic-mob {
+        display: block;
+    }
+    .footer .container {
+        flex-direction: column-reverse;
+    }
     .container {
         margin: 0px 10px;
     }
@@ -6,10 +34,20 @@
         font-size: 26px;
     }
     .data-profile {
-        display: none;
+        //display: none;
     }
 }
 @media (max-width: 767px) {
+    h4{
+        font-size: 18px;
+    }
+    .data-profile .wrapper{
+        overflow-x: scroll;
+    }
+    .header {
+        margin: 0px 0px 16px 0px;
+        border-radius: 0 0 10px 10px;
+    }
     .info-profile .cart .avatar {
         border-radius: 20px;
     }
@@ -21,23 +59,22 @@
     }
 }
 @media (max-width: 640px) {
-    .param-profile .subtitle{
-        padding: 5px 20px ;
+    .param-profile .subtitle {
+        padding: 5px 20px;
     }
 
-    .info-profile .cart .avatar img{
+    .info-profile .cart .avatar img {
         width: 100%;
-       
     }
-    .param-profile .subtitle{
+    .param-profile .subtitle {
         top: 65px;
     }
-    .param-profile h3{
+    .param-profile h3 {
         margin: 0px 0px 80px 0px;
     }
-    .param-profile .item{
+    .param-profile .item {
         flex-direction: column;
-        padding: 15px 0px ;
+        padding: 15px 0px;
     }
     .info-profile .cart .avatar {
         width: 100%;
@@ -46,17 +83,16 @@
         align-items: center;
     }
 
-    .info-profile .cart .id-info{
+    .info-profile .cart .id-info {
         position: relative;
         flex-direction: row;
         justify-content: space-between;
     }
-    .info-profile .cart{
+    .info-profile .cart {
         flex-direction: column;
     }
     .head-profile ul {
         min-width: 400px;
-       
     }
     .head-profile {
         .container {
