@@ -153,6 +153,9 @@ section {
    a {
       color: var(--Text-Grey, #7786a5);
    }
+   .copy{
+      min-width: 200px;
+   }
    .geo {
       display: flex;
       align-items: center;

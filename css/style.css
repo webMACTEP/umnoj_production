@@ -233,6 +233,9 @@ section {
 .footer a {
   color: var(--Text-Grey, #7786a5);
 }
+.footer .copy {
+  min-width: 200px;
+}
 .footer .geo {
   display: flex;
   align-items: center;
