@@ -56,6 +56,16 @@
   }
 }
 @media (max-width: 640px) {
+  .edit-profile .wrapper {
+    margin: 20px 20px 36px 20px;
+  }
+  .sertificats-profile .items {
+    justify-content: center;
+  }
+  .sertificats-profile .item {
+    width: 154px;
+    height: 230px;
+  }
   .param-profile .subtitle {
     padding: 5px 20px;
   }
