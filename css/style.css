@@ -229,6 +229,42 @@ section {
   line-height: 140%; /* 19.6px */
   padding: 0px 0px 10px 0px;
 }
+.footer .wrapp.mob {
+  background: url("../img/tab_bar.svg") top no-repeat;
+  padding: 20px 0px 20px 0px;
+  background-position-y: -19px;
+}
+.footer .wrapp.mob .butt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+.footer .wrapp.mob .left,
+.footer .wrapp.mob .right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+}
+.footer .wrapp.mob .navigations {
+  margin: 0px 0px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .butt-add {
+  z-index: 99;
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  margin-left: -24px;
+}
+.footer .wrapper.dtop {
+  display: block;
+}
+.footer .wrapp.mob {
+  display: none;
+}
 .footer .politic-mob {
   display: none;
 }
@@ -530,6 +566,9 @@ section {
   top: 50%;
   left: 50%;
   margin: -20px 0px 0px -20px;
+}
+.about-profile .play:hover svg circle {
+  fill: #4e6af3;
 }
 .about-profile .item {
   display: flex;

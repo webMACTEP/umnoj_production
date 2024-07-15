@@ -149,13 +149,50 @@ section {
    margin: 10px 10px 21px 10px;
 }
 .footer {
+   .wrapp.mob {
+      .butt {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 2px;
+      }
+      .left,
+      .right {
+         width: 50%;
+         display: flex;
+         justify-content: center;
+         gap: 64px;
+      }
+      .navigations {
+         margin: 0px 0px 0px 0px;
+         display: flex;
+         justify-content: space-between;
+        
+      }
+      background: url("../img/tab_bar.svg") top no-repeat;
+      padding: 20px 0px 20px 0px;
+      background-position-y: -19px;
+   }
+   .butt-add {
+      z-index: 99;
+      position: absolute;
+      top: -22px;
+      left: 50%;
+      margin-left: -24px;
+   }
+   .wrapper.dtop {
+      display: block;
+   }
+   .wrapp.mob {
+      display: none;
+   }
    .politic-mob {
       display: none;
    }
    a {
       color: var(--Text-Grey, #7786a5);
    }
-   .copy{
+   .copy {
       min-width: 200px;
    }
    .geo {
@@ -481,6 +518,13 @@ section {
 }
 .about-profile {
    .play {
+      &:hover {
+         svg {
+            circle {
+               fill: #4e6af3;
+            }
+         }
+      }
       cursor: pointer;
       position: absolute;
       top: 50%;
@@ -607,6 +651,6 @@ section {
    .wrapper {
       display: flex;
       justify-content: center;
-      padding: 15px 30px ;
+      padding: 15px 30px;
    }
 }

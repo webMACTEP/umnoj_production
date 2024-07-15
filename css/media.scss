@@ -38,10 +38,22 @@
     }
 }
 @media (max-width: 767px) {
-    h4{
+    .footer {
+        position: relative;
+        margin: 90px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+    .footer .wrapper.dtop {
+        display: none;
+    }
+    .footer .wrapp.mob {
+        display: block;
+       
+    }
+    h4 {
         font-size: 18px;
     }
-    .data-profile .wrapper{
+    .data-profile .wrapper {
         overflow-x: scroll;
     }
     .header {
@@ -59,13 +71,17 @@
     }
 }
 @media (max-width: 640px) {
-    .edit-profile .wrapper{
+    .footer .wrapp.mob .left, .footer .wrapp.mob .right{
+        gap: 0px;
+        justify-content: space-around;
+    }
+    .edit-profile .wrapper {
         margin: 20px 20px 36px 20px;
     }
-    .sertificats-profile .items{
+    .sertificats-profile .items {
         justify-content: center;
     }
-    .sertificats-profile .item{
+    .sertificats-profile .item {
         width: 154px;
         height: 230px;
     }

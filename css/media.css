@@ -35,6 +35,17 @@
   }
 }
 @media (max-width: 767px) {
+  .footer {
+    position: relative;
+    margin: 90px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+  }
+  .footer .wrapper.dtop {
+    display: none;
+  }
+  .footer .wrapp.mob {
+    display: block;
+  }
   h4 {
     font-size: 18px;
   }
@@ -56,6 +67,10 @@
   }
 }
 @media (max-width: 640px) {
+  .footer .wrapp.mob .left, .footer .wrapp.mob .right {
+    gap: 0px;
+    justify-content: space-around;
+  }
   .edit-profile .wrapper {
     margin: 20px 20px 36px 20px;
   }
