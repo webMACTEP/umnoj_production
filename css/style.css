@@ -126,7 +126,7 @@ section {
 .header {
   border-radius: 10px;
   background: var(--BG-Black, #2a344a);
-  padding: 10px 20px;
+  padding: 8px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -195,6 +195,15 @@ section {
 }
 .header .left ul li {
   padding: 11px 20px;
+  color: var(--Header-Text_Default, #d5daf1);
+  /* Platform/Accent_12_CAPS (S) */
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
 }
 .header .left ul a {
   display: flex;
