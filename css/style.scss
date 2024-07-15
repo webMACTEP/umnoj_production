@@ -13,7 +13,7 @@ h3 {
    span {
       color: var(--Text-Grey, #7786a5);
       display: inline-block;
-      margin: 0px 0px 0px 10px;
+      margin: 0px 0px 0px 8px;
    }
    color: var(--Text-Black, #2a344a);
 
@@ -26,6 +26,8 @@ h3 {
 h4 {
    span {
       color: var(--Text-Grey, #7786a5);
+      display: inline-block;
+      margin: 0px 0px 0px 5px;
    }
    color: var(--Text-Black, #2a344a);
 
@@ -553,16 +555,27 @@ section {
    .line {
       position: absolute;
       left: 0;
-      top: 70px;
+      top: 85px;
       width: 100%;
       height: 2px;
       background: #f1f7ff;
    }
    h3 {
-      margin: 0px 0px 50px 0px;
+      margin: 8px 0px 56px 0px;
    }
 }
 .sertificats-profile {
+   .wrapper {
+      position: relative;
+   }
+   .line {
+      position: absolute;
+      left: 0;
+      top: 75px;
+      width: 100%;
+      height: 2px;
+      background: #f1f7ff;
+   }
    .item {
       cursor: pointer;
       img {
@@ -580,7 +593,7 @@ section {
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
-      margin: 50px 0px 0px 0px;
+      margin: 55px 0px 0px 0px;
    }
 }
 .edit-profile {
@@ -594,5 +607,6 @@ section {
    .wrapper {
       display: flex;
       justify-content: center;
+      padding: 15px 30px ;
    }
 }
