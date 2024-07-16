@@ -262,22 +262,81 @@
           <div class="wrapper">
             <h3>Мой профиль</h3>
             <ul>
-              <li class="">Личные данные</li>
-              <li class="active">Уведомления</li>
-              <li class="">Безопасность</li>
+              <li class="personal-data-btn active">Личные данные</li>
+              <li class="notifications-btn">Уведомления</li>
+              <li class="safety-btn">Безопасность</li>
             </ul>
           </div>
         </div>
       </section>
-      <div class="notifications active">
-        <section class="your-notifications">
+      <div class="safety">
+        <section class="">
           <div class="container">
-            <div class="wrapper"></div>
+            <div class="wrapper">
+              <h4>Данные для авторизации</h4>
+            </div>
           </div>
         </section>
-        <section class="list-notifications"></section>
       </div>
-      <div class="personal-data ">
+      <div class="notifications">
+        <section class="your-notifications">
+          <div class="container">
+            <div class="wrapper">
+              <h4>Ваши уведомления</h4>
+              <div class="line"></div>
+              <ul>
+                <li>
+                  <div class="title">Все входящие сообщения</div>
+                  <div class="toggle"><div class="circle"></div></div>
+                </li>
+                <li>
+                  <div class="title">Новые, подходящие мне заявки</div>
+                  <div class="toggle"><div class="circle"></div></div>
+                </li>
+                <li>
+                  <div class="title">Отклики на мои заявки</div>
+                  <div class="toggle"><div class="circle"></div></div>
+                </li>
+                <li>
+                  <div class="title">Получение контактов</div>
+                  <div class="toggle"><div class="circle"></div></div>
+                </li>
+                <li>
+                  <div class="title">Акции и новости Umnoj</div>
+                  <div class="toggle"><div class="circle"></div></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="list-notifications">
+          <div class="container">
+            <div class="wrapper">
+              <h4>Где вы получаете уведомления</h4>
+              <div class="line"></div>
+              <ul>
+                <li>
+                  <div class="title">
+                    По эл. почте<span> — info@umnoj.com</span>
+                  </div>
+                  <div class="right">
+                    <div class="edit">Изменить</div>
+                    <div class="toggle"><div class="circle"></div></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="title">В Telegram</div>
+                  <div class="right">
+                    <div class="edit">Добавить Telegram</div>
+                    <div class="toggle"><div class="circle"></div></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="personal-data active">
         <section class="info-profile">
           <div class="container">
             <div class="wrapper">
@@ -711,6 +770,41 @@
     <script src="js/script.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        var listItems = document.querySelectorAll(".head-profile ul li");
+
+        var personalDataBlock = document.querySelector(".personal-data");
+        var notificationsBlock = document.querySelector(".notifications");
+        var safetyBlock = document.querySelector(".safety");
+
+        listItems.forEach(function (item) {
+          item.addEventListener("click", function () {
+            listItems.forEach(function (el) {
+              el.classList.remove("active");
+            });
+            personalDataBlock.classList.remove("active");
+            notificationsBlock.classList.remove("active");
+            safetyBlock.classList.remove("active");
+
+            this.classList.add("active");
+
+            if (this.classList.contains("personal-data-btn")) {
+              personalDataBlock.classList.add("active");
+            } else if (this.classList.contains("notifications-btn")) {
+              notificationsBlock.classList.add("active");
+            } else if (this.classList.contains("safety-btn")) {
+              safetyBlock.classList.add("active");
+            }
+          });
+        });
+
+        var toggles = document.querySelectorAll(".toggle");
+
+        toggles.forEach(function (toggle) {
+          toggle.addEventListener("click", function () {
+            this.classList.toggle("active");
+          });
+        });
+
         var button = document.querySelector(".butt-more");
 
         if (button) {

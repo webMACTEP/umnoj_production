@@ -782,9 +782,73 @@ section {
   padding: 15px 30px;
 }
 
+.notifications,
+.safety,
 .personal-data {
   display: none;
 }
+.notifications.active,
+.safety.active,
 .personal-data.active {
   display: block;
+}
+
+.notifications .right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  color: #4e6af3;
+}
+.notifications .right .edit {
+  cursor: pointer;
+}
+.notifications li {
+  border-bottom: 1px solid var(--Stroke-Divider, #e1edfd);
+  padding: 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.notifications li:last-child {
+  border-bottom: none;
+  margin-bottom: -20px;
+}
+.notifications ul {
+  display: flex;
+  flex-direction: column;
+}
+.notifications h4 {
+  margin: 0px 0px 20px 0px;
+}
+.notifications .wrapper {
+  position: relative;
+}
+.notifications .line {
+  position: absolute;
+  left: 0;
+  top: 80px;
+  width: 100%;
+  height: 2px;
+  background: #f1f7ff;
+}
+
+.toggle {
+  cursor: pointer;
+  width: 40px;
+  border-radius: 20px;
+  background: var(--Stroke-Grey, #c7d2e9);
+  padding: 2px;
+  display: flex;
+  justify-content: flex-start;
+  transition: 0.1s;
+}
+.toggle .circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  background: #fff;
+}
+.toggle.active {
+  justify-content: flex-end;
+  background: var(--Main-Blue, #4e6af3);
 }/*# sourceMappingURL=style.css.map */
