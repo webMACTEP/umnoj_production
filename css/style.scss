@@ -52,6 +52,126 @@ section {
    margin: 0px auto;
 }
 .header {
+   .submenu {
+      
+      .create-button {
+         border-radius: 10px;
+         background: var(--Button-Primary-BG-Default, #4e6af3);
+         padding: 12px 20px;
+         color: var(--Button-Primary-Text-Default, #fff);
+         
+
+         /* Platform/Button Link/Small */
+         font-family: Roboto;
+         font-size: 14px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 16px; /* 114.286% */
+         text-transform: none;
+
+         justify-content: center;
+
+         margin: 10px 10px 0px 10px;
+      }
+      li {
+         a {
+            &:hover,
+            &.active {
+               border-radius: var(--Corner_radius_m, 10px);
+               background: var(--Header-BG-Click, #343f56);
+            }
+            .item {
+               display: flex;
+               flex-direction: column;
+               gap: 4px;
+            }
+            .title {
+               color: var(--Header-Text-Hover, #fff);
+            }
+            .descr {
+               color: var(--Text-Disabled, #b8c6e3);
+
+               /* Platform/Fields/Title (caption) */
+               font-family: Roboto;
+               font-size: 12px;
+               font-style: normal;
+               font-weight: 400;
+               line-height: 16px; /* 133.333% */
+               text-transform: none;
+            }
+            .butt {
+               svg {
+                  min-width: 18px;
+                  min-height: 18px;
+               }
+               display: flex;
+               gap: 10px;
+               align-items: flex-start;
+
+               color: var(--Text-White, #fff);
+               font-family: Roboto;
+               font-size: 14px;
+               font-style: normal;
+               font-weight: 500;
+               line-height: 140%; /* 19.6px */
+               text-transform: none;
+               min-width: 250px;
+            }
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            align-items: flex-start;
+            padding: 10px 20px;
+         }
+         padding: 0px 0px 0px 0px !important;
+      }
+      border-radius: 0px 0px 15px 15px;
+      padding: 7px 10px 20px 10px;
+      background: var(--BG-Black, #2a344a);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      
+      flex-direction: column;
+      gap: 2px;
+
+      display: none;
+   }
+   .main-menu {
+      .icon {
+         display: flex;
+         align-items: center;
+      }
+      li {
+         &:hover{
+            .submenu{
+               display: flex;
+            }
+         }
+         padding: 11px 20px;
+         position: relative;
+         color: var(--Header-Text_Default, #d5daf1);
+
+         /* Platform/Accent_12_CAPS (S) */
+         font-family: Roboto;
+         font-size: 12px;
+         font-style: normal;
+         font-weight: 600;
+         line-height: 16px; /* 133.333% */
+         letter-spacing: 0.84px;
+         text-transform: uppercase;
+      }
+      a {
+         display: flex;
+         align-items: center;
+         gap: 10px;
+         text-transform: uppercase;
+      }
+      display: flex;
+      align-items: center;
+      gap: 10px;
+   }
+
    .site-logo-mob {
       display: none;
    }
@@ -106,31 +226,6 @@ section {
    }
 
    .left {
-      ul {
-         li {
-            padding: 11px 20px;
-
-            color: var(--Header-Text_Default, #d5daf1);
-
-            /* Platform/Accent_12_CAPS (S) */
-            font-family: Roboto;
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 16px; /* 133.333% */
-            letter-spacing: 0.84px;
-            text-transform: uppercase;
-         }
-         a {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-transform: uppercase;
-         }
-         display: flex;
-         align-items: center;
-         gap: 10px;
-      }
       display: flex;
       align-items: center;
       gap: 30px;
@@ -147,6 +242,8 @@ section {
    justify-content: space-between;
    align-items: center;
    margin: 10px 10px 21px 10px;
+   position: relative;
+   z-index: 999;
 }
 .footer {
    .wrapp.mob {
@@ -167,7 +264,6 @@ section {
          margin: 0px 0px 0px 0px;
          display: flex;
          justify-content: space-between;
-        
       }
       background: url("../img/tab_bar.svg") top no-repeat;
       padding: 20px 0px 20px 0px;
@@ -252,7 +348,7 @@ section {
                background: #4e6af3;
                bottom: -10px;
                left: 0;
-               z-index: 999;
+               z-index: 1;
             }
          }
          line-height: 32px; /* 125% */
