@@ -851,4 +851,57 @@ section {
 .toggle.active {
   justify-content: flex-end;
   background: var(--Main-Blue, #4e6af3);
+}
+
+.safety .delete-butt {
+  cursor: pointer;
+  color: #fff;
+  line-height: 20px; /* 125% */
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 10px;
+  background: var(--Text-Error, #f34942);
+  display: flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.safety .title {
+  color: var(--Text-Grey, #7786a5);
+}
+.safety .info {
+  max-width: 830px;
+  margin: 0px 0px 30px 0px;
+  color: var(--Text-Grey, #7786a5);
+  /* Platform/Desktop/Body-1 R */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+.safety .edit {
+  cursor: pointer;
+  color: #4e6af3;
+}
+.safety ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0px 10px 0px;
+}
+.safety h4 {
+  margin: 0px 0px 20px 0px;
+}
+.safety .wrapper {
+  position: relative;
+}
+.safety .line {
+  position: absolute;
+  left: 0;
+  top: 80px;
+  width: 100%;
+  height: 2px;
+  background: #f1f7ff;
 }/*# sourceMappingURL=style.css.map */
