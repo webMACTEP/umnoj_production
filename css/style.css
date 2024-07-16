@@ -80,6 +80,9 @@ body {
   font-style: normal;
   background: #eef1f5;
   color: #2a344a;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 h3 {
@@ -110,6 +113,9 @@ h4 span {
   margin: 0px 0px 0px 5px;
 }
 
+main {
+  flex-grow: 1;
+}
 main .wrapper {
   padding: 30px;
   border-radius: var(--Corner_radius_m, 10px);
@@ -774,4 +780,11 @@ section {
   display: flex;
   justify-content: center;
   padding: 15px 30px;
+}
+
+.personal-data {
+  display: none;
+}
+.personal-data.active {
+  display: block;
 }/*# sourceMappingURL=style.css.map */
