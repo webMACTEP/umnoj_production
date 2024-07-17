@@ -895,6 +895,52 @@ section {
    background: var(--Button-Primary-BG-Default, #4e6af3);
 }
 .modal {
+   .daha {
+      span {
+         color: var(--Main-Blue, #4e6af3);
+         text-align: center;
+
+         /* Platform/Button Link/Small */
+         font-family: Roboto;
+         font-size: 14px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 16px; /* 114.286% */
+      }
+      color: var(--Text-Disabled, #b8c6e3);
+      text-align: right;
+
+      /* Platform/Button Link/Small */
+      font-family: Roboto;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px; /* 114.286% */
+   }
+   .confirm {
+      h3 {
+         margin: 30px 0px 20px 0px;
+      }
+   }
+   .numbers {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      input {
+         padding: 18px 20px;
+         max-width: 60px;
+         color: var(--Text-Black, #2a344a);
+         text-align: center;
+
+         /* Platform/Fields/Placeholder */
+         font-family: Roboto;
+         font-size: 16px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 24px; /* 150% */
+      }
+   }
    .flags {
       cursor: pointer;
       .drop {
@@ -937,6 +983,9 @@ section {
       }
    }
    .subtitle {
+      a {
+         color: #4e6af3;
+      }
       // position: absolute;
       // left: 0;
       // top: 80px;

@@ -937,6 +937,47 @@ section {
   min-height: 100%;
   z-index: 999;
 }
+.modal .daha {
+  color: var(--Text-Disabled, #b8c6e3);
+  text-align: right;
+  /* Platform/Button Link/Small */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 114.286% */
+}
+.modal .daha span {
+  color: var(--Main-Blue, #4e6af3);
+  text-align: center;
+  /* Platform/Button Link/Small */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 114.286% */
+}
+.modal .confirm h3 {
+  margin: 30px 0px 20px 0px;
+}
+.modal .numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.modal .numbers input {
+  padding: 18px 20px;
+  max-width: 60px;
+  color: var(--Text-Black, #2a344a);
+  text-align: center;
+  /* Platform/Fields/Placeholder */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
 .modal .flags {
   cursor: pointer;
   position: absolute;
@@ -985,6 +1026,9 @@ section {
   font-weight: 400;
   line-height: 150%; /* 21px */
   width: 100%;
+}
+.modal .subtitle a {
+  color: #4e6af3;
 }
 .modal .mw700 {
   width: 700px;
