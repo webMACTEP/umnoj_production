@@ -1142,4 +1142,7 @@ section {
   padding: 30px 0px 0px 0px;
   border-radius: var(--Corner_radius_m, 10px);
   background: var(--BG-White, #fff);
+}
+.modal.test {
+  position: absolute;
 }/*# sourceMappingURL=style.css.map */
