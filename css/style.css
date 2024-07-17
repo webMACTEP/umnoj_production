@@ -953,12 +953,9 @@ section {
   line-height: 16px; /* 133.333% */
 }
 .modal .input-container label span {
-  color: var(--Text-Error, #F34942);
+  color: var(--Text-Error, #f34942);
 }
 .modal .subtitle {
-  position: absolute;
-  left: 0;
-  top: 80px;
   background: var(--Stroke-Divider_form, #f1f7ff);
   padding: var(--Corner_radius_s, 5px) 30px;
   color: var(--Text-Grey_Dark, #3b4a69);
@@ -970,13 +967,17 @@ section {
   width: 100%;
 }
 .modal .mw700 {
-  width: 620px;
+  width: 700px;
 }
 .modal .mw460 {
-  width: 380px;
+  width: 460px;
+  padding: 10px 40px 40px 40px;
+}
+.modal .mw460 h4 {
+  padding: 0px 0px 0px 0px;
 }
 .modal form {
-  margin: 100px 0px 0px 0px;
+  padding: 50px 30px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -999,7 +1000,7 @@ section {
   background: var(--Button-Primary-BG-Default, #4e6af3);
   border: none;
   display: flex;
-  padding: 10px 20px;
+  padding: 15px 20px;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -1025,11 +1026,12 @@ section {
   font-weight: 400;
   line-height: 150%; /* 24px */
 }
-.modal .info h4 {
-  margin: 0px 0px 15px 0px;
-}
 .modal .info img {
   margin: 0px 0px 10px 0px;
+}
+.modal h4 {
+  padding: 0px 30px;
+  margin: 0px 0px 20px 0px;
 }
 .modal .close-button {
   cursor: pointer;
@@ -1046,7 +1048,7 @@ section {
   position: relative;
   max-width: -moz-fit-content;
   max-width: fit-content;
-  padding: 40px;
+  padding: 30px 0px 0px 0px;
   border-radius: var(--Corner_radius_m, 10px);
   background: var(--BG-White, #fff);
 }/*# sourceMappingURL=style.css.map */
