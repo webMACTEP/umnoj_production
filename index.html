@@ -264,12 +264,12 @@
             <ul>
               <li class="personal-data-btn active">Личные данные</li>
               <li class="notifications-btn">Уведомления</li>
-              <li class="safety-btn ">Безопасность</li>
+              <li class="safety-btn">Безопасность</li>
             </ul>
           </div>
         </div>
       </section>
-      <div class="safety ">
+      <div class="safety">
         <section class="">
           <div class="container">
             <div class="wrapper">
@@ -289,8 +289,17 @@
           <div class="container">
             <div class="wrapper">
               <h4>Удалить профиль</h4>
-              <div class="info">При удалении профиля связанные с ним данные будут удалены. Профиль будет приостановлен на 30 дней, в течение которых вы сможете отменить удаление</div>
-              <div class="delete-butt">Удалить акканут</div>
+              <div class="info">
+                При удалении профиля связанные с ним данные будут удалены.
+                Профиль будет приостановлен на 30 дней, в течение которых
+                вы сможете отменить удаление
+              </div>
+              <div
+                class="delete-butt trigger"
+                data-modal-type="deleteProfileModal"
+              >
+                Удалить акканут
+              </div>
             </div>
           </div>
         </section>
@@ -783,10 +792,55 @@
         </div>
       </div>
     </footer>
+    <div id="modal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close-button"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M18.3647 5.63567C18.7552 6.02619 18.7552 6.65936 18.3647 7.04988L13.4148 11.9998L18.3646 16.9495C18.7551 17.34 18.7551 17.9732 18.3646 18.3637C17.974 18.7543 17.3409 18.7543 16.9504 18.3637L12.0006 13.414L7.05099 18.3636C6.66047 18.7541 6.0273 18.7541 5.63678 18.3636C5.24625 17.9731 5.24625 17.3399 5.63678 16.9494L10.5864 11.9998L5.63664 7.05002C5.24612 6.6595 5.24612 6.02633 5.63664 5.63581C6.02717 5.24528 6.66033 5.24528 7.05086 5.63581L12.0006 10.5856L16.9505 5.63567C17.341 5.24514 17.9742 5.24514 18.3647 5.63567Z"
+              fill="#7786A5"
+            /></svg
+        ></span>
+        <div id="modal-body"></div>
+      </div>
+    </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/script.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".trigger").forEach((item) => {
+          item.addEventListener("click", function () {
+            const modalType = this.getAttribute("data-modal-type"); // Например, 'formModal' или 'infoModal'
+
+            // Загрузка содержимого модального окна
+            fetch("modals.html")
+              .then((response) => response.text())
+              .then((html) => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, "text/html");
+                const modalContent = doc.getElementById(modalType).innerHTML;
+
+                document.getElementById("modal-body").innerHTML = modalContent;
+                document.getElementById("modal").style.display = "flex"; // Показываем модальное окно
+              });
+          });
+        });
+
+        // Закрытие модального окна
+        document
+          .querySelector(".close-button")
+          .addEventListener("click", function () {
+            document.getElementById("modal").style.display = "none";
+          });
+        //////////////////////////////////////////////////////////////////////////////////////
         var listItems = document.querySelectorAll(".head-profile ul li");
 
         var personalDataBlock = document.querySelector(".personal-data");
