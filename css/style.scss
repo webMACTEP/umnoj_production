@@ -934,9 +934,12 @@ section {
    .mw460 {
       width: 460px;
       padding: 10px 40px 40px 40px;
-      h4{
+      h4 {
          padding: 0px 0px 0px 0px;
       }
+   }
+   .line {
+      border-bottom: 2px solid var(--Stroke-Divider_form, #f1f7ff);
    }
    form {
       //margin: 64px 0px 0px 0px;
@@ -946,6 +949,18 @@ section {
       gap: 20px;
       align-items: center;
       input {
+         &.phone {
+            padding: 18px 20px 18px 97px;
+
+            color: var(--Fields-Text, #2a344a);
+
+            /* Platform/Fields/Placeholder */
+            font-family: Roboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px; /* 150% */
+         }
          width: 370px;
          padding: 10px 20px;
          border-radius: 10px;
@@ -998,9 +1013,11 @@ section {
       }
       text-align: center;
    }
+   h3,
    h4 {
       padding: 0px 30px;
       margin: 0px 0px 20px 0px;
+      line-height: 120%; /* 38.4px */
    }
    .close-button {
       cursor: pointer;

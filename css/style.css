@@ -976,6 +976,9 @@ section {
 .modal .mw460 h4 {
   padding: 0px 0px 0px 0px;
 }
+.modal .line {
+  border-bottom: 2px solid var(--Stroke-Divider_form, #f1f7ff);
+}
 .modal form {
   padding: 50px 30px;
   display: flex;
@@ -989,6 +992,16 @@ section {
   border-radius: 10px;
   border: 2px solid var(--Fields-Stroke, #e1edfd);
   background: var(--Fields-Form, #fff);
+}
+.modal form input.phone {
+  padding: 18px 20px 18px 97px;
+  color: var(--Fields-Text, #2a344a);
+  /* Platform/Fields/Placeholder */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 150% */
 }
 .modal form input[type=email] {
   padding: 30px 20px 10px 20px;
@@ -1029,9 +1042,11 @@ section {
 .modal .info img {
   margin: 0px 0px 10px 0px;
 }
+.modal h3,
 .modal h4 {
   padding: 0px 30px;
   margin: 0px 0px 20px 0px;
+  line-height: 120%; /* 38.4px */
 }
 .modal .close-button {
   cursor: pointer;
