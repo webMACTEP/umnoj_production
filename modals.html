@@ -46,8 +46,8 @@
                 placeholder="+7 (919) 777–77–77"
               />
             </div>
-
-            <input class="" type="submit" value="Далее" />
+            <div class="form-next">Далее</div>
+            <!-- <input class="" type="submit" value="Далее" /> -->
           </form>
           <div class="confirm">
             <div class="line"></div>
@@ -134,5 +134,24 @@
         </div>
       </div>
     </div>
+    <script>
+        document.body.addEventListener('click', function(event) {
+          // Проверяем, что клик был совершен на элементе с классом 'form-next'
+          if (event.target.classList.contains('form-next')) {
+            event.target.classList.add('hide');
+            
+            // Находим ближайший родительский элемент с классом 'modal-content'
+            var modalContent = event.target.closest('.modal-content');
+            
+            // В этом же родительском элементе ищем блок 'confirm'
+            var confirmElement = modalContent.querySelector('.confirm');
+            
+            if (confirmElement) {
+              confirmElement.classList.add('active');
+            }
+          }
+        });
+      </script>
+      
   </body>
 </html>
