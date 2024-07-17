@@ -113,9 +113,29 @@
                 placeholder="info@umnoj.com"
               />
             </div>
-
-            <input class="" type="submit" value="Далее" />
+            <div class="form-next">Далее</div>
+            <!-- <input class="" type="submit" value="Далее" /> -->
           </form>
+          <div class="confirm">
+            <div class="line"></div>
+            <h3>Подтвердите эл. почту</h3>
+            <div class="subtitle">
+              На почту info@umnoj.com был отправлен код для подтверждения.
+              Если код не поступил, тогда напишите в<a href="">поддержку</a>
+            </div>
+            <form action="">
+              <div class="numbers">
+                <input type="" name="" id="" />
+                <input type="" name="" id="" />
+                <input type="" name="" id="" />
+                <input type="" name="" id="" />
+              </div>
+              <div class="daha">
+                Отправить код ещё раз через <span>(2:59)</span>
+              </div>
+              <input class="" type="submit" value="Изменить эл. почту" />
+            </form>
+          </div>
         </div>
       </div>
       <!-- Модальное окно для Подтвердите удаление профиля -->
@@ -135,23 +155,19 @@
       </div>
     </div>
     <script>
-        document.body.addEventListener('click', function(event) {
-          // Проверяем, что клик был совершен на элементе с классом 'form-next'
-          if (event.target.classList.contains('form-next')) {
-            event.target.classList.add('hide');
-            
-            // Находим ближайший родительский элемент с классом 'modal-content'
-            var modalContent = event.target.closest('.modal-content');
-            
-            // В этом же родительском элементе ищем блок 'confirm'
-            var confirmElement = modalContent.querySelector('.confirm');
-            
-            if (confirmElement) {
-              confirmElement.classList.add('active');
-            }
+      document.body.addEventListener("click", function (event) {
+        if (event.target.classList.contains("form-next")) {
+          event.target.classList.add("hide");
+
+          var modalContent = event.target.closest(".modal-content");
+
+          var confirmElement = modalContent.querySelector(".confirm");
+
+          if (confirmElement) {
+            confirmElement.classList.add("active");
           }
-        });
-      </script>
-      
+        }
+      });
+    </script>
   </body>
 </html>

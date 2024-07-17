@@ -825,14 +825,11 @@
       </div>
       <script>
         document.body.addEventListener("click", function (event) {
-          // Проверяем, что клик был совершен на элементе с классом 'form-next'
           if (event.target.classList.contains("form-next")) {
             event.target.classList.add("hide");
 
-            // Находим ближайший родительский элемент с классом 'modal-content'
             var modalContent = event.target.closest(".modal-content");
 
-            // В этом же родительском элементе ищем блок 'confirm'
             var confirmElement = modalContent.querySelector(".confirm");
 
             if (confirmElement) {

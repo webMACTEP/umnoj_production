@@ -930,7 +930,7 @@ section {
   background: var(--overlay, rgba(60, 75, 97, 0.6));
   -webkit-backdrop-filter: blur(11px);
           backdrop-filter: blur(11px);
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   min-width: 100%;
