@@ -937,6 +937,26 @@ section {
   min-height: 100%;
   z-index: 999;
 }
+.modal .flags {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.modal .flags::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: -2px;
+  border-radius: var(--Corner_radius_m, 10px);
+  background: var(--Stroke-Divider, #e1edfd);
+  width: 2px;
+  height: 24px;
+  flex-shrink: 0;
+}
 .modal .input-container {
   position: relative;
 }

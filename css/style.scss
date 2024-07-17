@@ -895,6 +895,28 @@ section {
    background: var(--Button-Primary-BG-Default, #4e6af3);
 }
 .modal {
+   .flags {
+      cursor: pointer;
+      .drop {
+      }
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      &::after {
+         content: "";
+         position: absolute;
+         right: -10px;
+         top: -2px;
+         border-radius: var(--Corner_radius_m, 10px);
+         background: var(--Stroke-Divider, #e1edfd);
+         width: 2px;
+         height: 24px;
+         flex-shrink: 0;
+      }
+   }
    .input-container {
       position: relative;
       label {
