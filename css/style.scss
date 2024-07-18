@@ -894,6 +894,7 @@ section {
    border-radius: 10px;
    background: var(--Button-Primary-BG-Default, #4e6af3);
 }
+.enter-page,
 .modal {
    .daha {
       span {
@@ -919,7 +920,7 @@ section {
    }
    .confirm {
       display: none;
-      &.active{
+      &.active {
          display: block;
       }
       h3 {
@@ -1025,6 +1026,10 @@ section {
       align-items: center;
       input {
          &.phone {
+            &.blocked {
+               border: 2px solid var(--Fields-Stroke-Error, #ffd8d8);
+               background: var(--Fields-BG-Error, #fff5f5);
+            }
             padding: 18px 20px 18px 97px;
 
             color: var(--Fields-Text, #2a344a);
@@ -1048,7 +1053,7 @@ section {
       .form-next,
       input[type="submit"] {
          width: 370px;
-         &.hide{
+         &.hide {
             display: none;
          }
          margin: 0px 0px 10px 0px;
@@ -1125,7 +1130,7 @@ section {
    background: var(--overlay, rgba(60, 75, 97, 0.6));
    backdrop-filter: blur(11px);
    position: fixed;
-   &.test{
+   &.test {
       position: absolute;
    }
    left: 0;
@@ -1133,4 +1138,42 @@ section {
    min-width: 100%;
    min-height: 100%;
    z-index: 999;
+}
+.enter-page {
+   .enter-button {
+      cursor: pointer;
+      border-radius: 10px;
+      background: var(--Button-Primary-BG-Default, #4e6af3);
+      padding: 15px 36px;
+      color: var(--Button-Primary-Text-Default, #fff);
+      text-align: center;
+
+      /* Platform/Button Link/Medium */
+      font-family: Roboto;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px; /* 125% */
+   }
+   .restore-access {
+      &.hide{
+         display: none;
+      }
+      cursor: pointer;
+      width: 370px;
+      color: var(--Main-Blue, #4e6af3);
+
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px; /* 114.286% */
+   }
+   .wrapper {
+      margin: 0px 0px 20px 0px;
+      padding: 30px 0px 0px 0px;
+      border-radius: var(--Corner_radius_m, 10px);
+      background: var(--BG-White, #fff);
+   }
+   background: none;
+   padding: 100px 0px 0px 0px;
 }
